@@ -408,6 +408,7 @@
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
                         <a class="nav-link " href="{{ route('divisions.index') }}">Divisions</a>
                         <a class="nav-link " href="{{ route('districts.index') }}">Districts</a>
+                        <a class="nav-link " href="{{ route('thanas.index') }}">Thanas</a>
                     </li>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
@@ -415,6 +416,9 @@
                     @if (Route::has('register'))
                         <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
                     @endif
+                    <a class="nav-link " href="{{ route('divisions.index') }}">Divisions</a>
+                    <a class="nav-link " href="{{ route('districts.index') }}">Districts</a>
+                    <a class="nav-link " href="{{ route('thanas.index') }}">Thanas</a>
             @endif
         </div>
         @endif

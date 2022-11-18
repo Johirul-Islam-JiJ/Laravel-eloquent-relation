@@ -53,6 +53,16 @@
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
+                            <li>
+                                <a class="nav-link " href="{{ route('divisions.index') }}">Divisions</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="{{ route('districts.index') }}">Districts</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="{{ route('thanas.index') }}">Thanas</a>
+                            </li>
+
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -65,6 +75,15 @@
                                 </li>
                             @endif
                         @else
+                            <li>
+                                <a class="nav-link " href="{{ route('divisions.index') }}">Divisions</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="{{ route('districts.index') }}">Districts</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="{{ route('thanas.index') }}">Thanas</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
