@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Division extends Model
 {
@@ -15,9 +16,9 @@ class Division extends Model
     {
         return $this->hasMany(District::class);
     }
-    public function thanas():HasMany
+    public function thanas():HasOne
     {
-        return $this->hasMany(Thana::class);
+        return $this->hasOne(Thana::class);
     }
 
 }
