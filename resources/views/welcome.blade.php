@@ -409,6 +409,8 @@
                         <a class="nav-link " href="{{ route('divisions.index') }}">Divisions</a>
                         <a class="nav-link " href="{{ route('districts.index') }}">Districts</a>
                         <a class="nav-link " href="{{ route('thanas.index') }}">Thanas</a>
+                        <a class="nav-link " href="{{ route('parks.index') }}">Parks</a>
+
                     </li>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
@@ -419,6 +421,7 @@
                     <a class="nav-link " href="{{ route('divisions.index') }}">Divisions</a>
                     <a class="nav-link " href="{{ route('districts.index') }}">Districts</a>
                     <a class="nav-link " href="{{ route('thanas.index') }}">Thanas</a>
+                    <a class="nav-link " href="{{ route('parks.index') }}">Parks</a>
             @endif
         </div>
         @endif

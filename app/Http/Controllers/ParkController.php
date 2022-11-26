@@ -10,13 +10,14 @@ class ParkController extends Controller
 
     public function index()
     {
-        //
+        $parks = Park::latest()->paginate();
+        return view('parks.index', compact('parks'));
     }
 
 
     public function create()
     {
-        //
+        return view('parks.create');
     }
 
 
