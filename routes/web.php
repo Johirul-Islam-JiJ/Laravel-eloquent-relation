@@ -22,8 +22,9 @@ Route::resource('districts', DistrictController::class)
     ->except('show');
 Route::resource('thanas', ThanaController::class)
     ->except('show');
-Route::resource('parks',ParkController::class)
-    ->except('show');
+Route::resource('parks',ParkController::class);
+Route::get('parks/{park}/assign-division', [ParkController::class, 'assignDivisionForm'])->name('parks.assign-division.form');
+Route::post('parks/{park}/assign-division', [ParkController::class, 'assignDivision'])->name('parks.assign-division');
 
 
 
