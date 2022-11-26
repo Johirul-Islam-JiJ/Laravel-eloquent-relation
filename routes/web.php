@@ -4,6 +4,7 @@ use App\Http\Controllers\DistrictController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DivisionController;
+use App\Http\Controllers\ParkController;
 use App\Http\Controllers\ThanaController;
 
 /*
@@ -29,6 +30,8 @@ Route::resource('divisions', DivisionController::class)
 Route::resource('districts', DistrictController::class)
     ->except('show');
 Route::resource('thanas', ThanaController::class)
+    ->except('show');
+Route::resource('parks',ParkController::class)
     ->except('show');
 
 
