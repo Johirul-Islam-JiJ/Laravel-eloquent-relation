@@ -9,7 +9,7 @@ class Park extends Model
 {
     protected $guarded = [];
 
-    public function division(): BelongsToMany
+    public function divisions(): BelongsToMany
     {
         return $this->belongsToMany(Division::class);
     }

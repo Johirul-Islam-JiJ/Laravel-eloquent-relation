@@ -14,9 +14,9 @@
                     <tr>
                         <th>Division</th>
                         <td>
-                            {{-- @foreach($park->divisions as $division)
+                            @foreach($park->divisions as $division)
                                 {{ $division->name }}
-                            @endforeach --}}
+                            @endforeach
                             <a href="{{ route('parks.assign-division.form', $park) }}"
                                class="btn btn-outline-primary btn-sm">Add</a>
                         </td>
