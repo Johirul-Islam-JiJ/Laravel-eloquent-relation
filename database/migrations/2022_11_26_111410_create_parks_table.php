@@ -20,6 +20,11 @@ class CreateParksTable extends Migration
             $table->string('address');
             $table->string('email')->nullable()->unique();
             $table->string('phone')->nullable();
+            $table->string('image')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('picture')->nullable();
+
+
             $table->timestamps();
         });
     }

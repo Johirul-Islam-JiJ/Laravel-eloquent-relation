@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Division;
 use App\Models\Park;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ParkController extends Controller
 {
@@ -28,7 +29,18 @@ class ParkController extends Controller
             'address' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email'],
             'phone' => ['nullable', 'numeric', 'gt:0'],
+            'image' => ['nullable', 'image', 'max:255'],
+            'photo' => ['nullable', 'image', 'max:255'],
+            'picture' => ['nullable', 'image', 'max:255'],
         ]);
+
+        if ($request->hasFile('image')) {
+            $valid['image'] = $request->file('image')->store('ParkPhotos', 'public');
+        }
+
+        if ($request->hasFile('photo')) {
+            $valid['photo'] = $request->file('photo')->store('ParkPrivetPhotos');
+        }
 
         if (Park::create($valid)) {
             return redirect()->route('parks.index')->with('success', 'Park Created Successfully');
@@ -80,5 +92,10 @@ class ParkController extends Controller
         }
 
         return back()->with('error', 'Something went wrong');
+    }
+
+    public function parkPhoto(Park $park)
+    {
+        return response()->file(Storage::path($park->photo));
     }
 }

@@ -9,6 +9,13 @@ class Park extends Model
 {
     protected $guarded = [];
 
+    public function getImageAttribute($value): ?string
+    {
+        if($value)
+            return asset('storage/'.$value);
+        return null;
+    }
+
     public function divisions(): BelongsToMany
     {
         return $this->belongsToMany(Division::class);

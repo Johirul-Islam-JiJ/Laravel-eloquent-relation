@@ -50,6 +50,21 @@
                                 <input type="text" class="form-control mb-3" id="phone" name="phone"
                                     value="{{ old('phone') }}" placeholder="Enter Phone">
                             </div>
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input type="file" class="form-control mb-3" id="image" name="image"
+                                     placeholder="Enter image">
+                            </div>
+                            <div class="form-group">
+                                <label for="photo">Photo</label>
+                                <input type="file" class="form-control mb-3" id="photo" name="photo"
+                                     placeholder="Enter photo">
+                            </div>
+                            <div class="form-group">
+                                <label for="picture">Picture</label>
+                                <input type="file" class="form-control mb-3" id="picture" name="picture"
+                                     placeholder="Enter picture">
+                            </div>
 
                             {{-- <div class="form-group my-3">
                                 <label for="division_id">Division</label>

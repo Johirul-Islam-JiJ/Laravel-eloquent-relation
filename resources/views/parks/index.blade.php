@@ -17,6 +17,10 @@
                                     <th scope="col">Address</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Phone</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Photo</th>
+                                    <th scope="col">Picture</th>
+
                                     {{-- <th scope="col">Division</th> --}}
                                     <th scope="col">Action</th>
                                 </tr>
@@ -29,6 +33,14 @@
                                         <td>{{ $park->address }}</td>
                                         <td>{{ $park->email }}</td>
                                         <td>{{ $park->phone }}</td>
+                                        <td>
+                                             <img src={{ "$park->image" }} class="img-fluid" height="40px" width="40px"
+                                                alt="">
+                                        </td>
+                                        <td>
+                                             <img src={{ route('parks.photo', $park) }} class="img-fluid" height="40px" width="40px"
+                                                alt="">
+                                        </td>
                                         {{-- <td>{{ $park->division }}</td> --}}
                                         <td>
                                             <a href="{{ route('parks.edit', $park->id) }}">Edit</a>
