@@ -35,7 +35,7 @@ class ParkController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $valid['image'] = $request->file('image')->store('ParkPhotos', 'public');
+            $valid['image'] = $request->file('image')->storePublicly('ParkPhotos', 's3');
         }
 
         if ($request->hasFile('photo')) {
